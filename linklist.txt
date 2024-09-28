@@ -1,0 +1,78 @@
+first create a class 
+then create the head == Node head;
+create a inner class that is a "Node" class
+then in that Node class declare a instance variable suppose "int data" mean we are storing our data that is taken from constructor 
+the that node class we have to create constructor suppose Public Node(int data) -> means we are taking value from the reference object and in that constructor assing value to the instance variable like this ="this.data"
+After that create a function like suppose we want store data from the first at the head the take function name as addfirst like that
+then first check the head is null or not
+like this ="if(head == null)"
+if head is null then
+head = newhead then return 
+
+else our our head is not null then 
+newNode.next = head;
+head = newNode;
+
+after that we want to insert elemnt in last node then write the function that is void addlast(int data)
+after that we have to check head is null or not 
+if(head == null){
+    head = newNode; 
+    return;
+}
+
+else{
+    then we have to traverse our linklist because we have suppose 1,2,3,4,5 -> null
+    then our head is pointing to 1-> node then we have to traverse our list till null
+    but while travrsing these element we have to remember one thing we can't lose our head point means what we have to keep out head point is to the first element
+    then we have to create another temparery node that is current node -> currNode
+    then we have to traverse the currNode till null
+    that code is like this
+    
+    while(currNode.next != null){
+        currNode = currNode.next;
+    }
+    currNode.next = newNode;
+}
+
+
+after that we want to print the our limked list
+void printlist(){
+    if(head == null){
+        sysout("empty);
+    }
+    else{
+        while(currNode != null){
+            sysout(currNode+"->");
+            currNode = currNode.next;
+        }
+        currNode.next = newNode;
+        sysout("null");
+    }
+}
+
+delete first()
+
+check head is null or not 
+then
+ head = head.next;
+
+ delete last()
+check head is null or not
+then 
+if head.next = null then head is null
+then 
+we have to create 2 temp node 1> currNode and 2> lastNode following
+node currNode = head;
+node lastNode = head.next;
+
+then 
+while(lastNode.next != null){
+        currNode = currNode.next;
+        lastNode = lastNode.next;
+}
+currNode.next = null;
+
+
+
+1.add element ,first , last
+2. delete element
